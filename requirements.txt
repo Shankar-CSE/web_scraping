@@ -1,3 +1,10 @@
-bs4
-requests
-pandas
+# Web Scraping Dependencies
+bs4>=0.0.1
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+pandas>=2.0.0
+lxml>=4.9.0
+
+# Optional: For Jupyter notebooks
+jupyter>=1.0.0
+notebook>=7.0.0

@@ -18,20 +18,73 @@ A collection of web scraping projects, ideas, and practice code using Python. Th
 - Clean and well-documented code
 - Uses modern Python libraries
 - Jupyter notebooks for interactive learning
+- Reusable utility functions
 
 ## 📁 Projects
 
-### Wikipedia Companies Scraper
+### 1. Wikipedia Companies Scraper (`wikipedia.ipynb`)
 
-A scraper that extracts the list of largest companies in the United States by revenue from Wikipedia.
-
-**Features:**
+Scrapes the list of largest companies in the United States by revenue from Wikipedia.
 
 - Parses HTML tables using BeautifulSoup
 - Exports data to CSV format
-- Handles data cleaning and formatting
+- **Output:** `output.csv`
 
-**Output:** `output.csv` containing company revenue data
+### 2. Quotes Scraper (`quotes_scraper.ipynb`)
+
+Scrapes quotes from [Quotes to Scrape](http://quotes.toscrape.com/).
+
+- Basic HTML parsing
+- Multi-page pagination handling
+- Extracts quotes, authors, and tags
+- **Output:** `quotes_output.csv`
+
+### 3. Books Scraper (`books_scraper.ipynb`)
+
+Scrapes book data from [Books to Scrape](http://books.toscrape.com/).
+
+- Product listing extraction
+- Price and rating parsing
+- Handles relative URLs
+- **Output:** `books_output.csv`
+
+### 4. News Scraper (`news_scraper.py`)
+
+Command-line tool to scrape stories from Hacker News.
+
+- CLI interface with arguments
+- JSON and CSV export options
+- Score and comment tracking
+- **Output:** `hacker_news.csv` / `hacker_news.json`
+
+### 5. API Scraper (`api_scraper.py`)
+
+Demonstrates fetching data from public APIs.
+
+- REST API requests
+- JSON response handling
+- Rate limiting
+- GitHub and JSONPlaceholder APIs
+- **Output:** `api_posts.csv`, `github_repos.csv`
+
+### 6. Image Scraper (`image_scraper.py`)
+
+Downloads images from websites.
+
+- Image URL extraction
+- Bulk downloading with progress
+- Organized output directories
+- **Output:** `downloaded_images/`
+
+### 7. Utility Module (`utils/`)
+
+Reusable scraper utilities.
+
+- Base scraper class
+- User-Agent rotation
+- Retry decorators
+- Text cleaning functions
+- Export helpers
 
 ## 🚀 Installation
 
@@ -68,45 +121,109 @@ A scraper that extracts the list of largest companies in the United States by re
 
 ## 💻 Usage
 
-### Running the Wikipedia Scraper
+### Jupyter Notebooks
 
-Open and run the Jupyter notebook:
+Open any notebook in Jupyter or VS Code:
 
 ```bash
-jupyter notebook wikipedia.ipynb
+jupyter notebook quotes_scraper.ipynb
 ```
 
-Or run it in VS Code with the Jupyter extension installed.
+### Python Scripts
 
-The script will:
+**News Scraper:**
 
-1. Fetch data from Wikipedia
-2. Parse the HTML table
-3. Export results to `output.csv`
+```bash
+# Scrape 1 page (default)
+python news_scraper.py
+
+# Scrape multiple pages
+python news_scraper.py -p 3
+
+# Export as JSON
+python news_scraper.py -p 2 -o json
+
+# Custom filename
+python news_scraper.py -p 5 -f my_news_data
+```
+
+**API Scraper:**
+
+```bash
+python api_scraper.py
+```
+
+**Image Scraper:**
+
+```bash
+python image_scraper.py
+```
+
+### Using Utility Functions
+
+```python
+from utils import BaseScraper, clean_text, save_to_csv
+
+# Create a scraper with rate limiting
+scraper = BaseScraper("https://example.com", rate_limit=1.0)
+
+# Fetch and parse a page
+soup = scraper.fetch("/page")
+
+# Clean extracted text
+text = clean_text(soup.find('p').text)
+
+# Save results
+save_to_csv(data, 'output.csv')
+```
 
 ## 🛠️ Technologies
 
-- **BeautifulSoup4** - HTML/XML parsing
-- **Requests** - HTTP library for making requests
-- **Pandas** - Data manipulation and CSV export
+| Library            | Purpose                    |
+| ------------------ | -------------------------- |
+| **BeautifulSoup4** | HTML/XML parsing           |
+| **Requests**       | HTTP requests              |
+| **Pandas**         | Data manipulation & export |
+| **lxml**           | Fast HTML/XML parser       |
+
+## 📂 Project Structure
+
+```
+web_scraping/
+├── wikipedia.ipynb       # Wikipedia companies scraper
+├── quotes_scraper.ipynb  # Quotes to Scrape scraper
+├── books_scraper.ipynb   # Books to Scrape scraper
+├── news_scraper.py       # Hacker News CLI scraper
+├── api_scraper.py        # API data fetcher
+├── image_scraper.py      # Image downloader
+├── utils/
+│   ├── __init__.py
+│   └── scraper_utils.py  # Reusable utilities
+├── requirements.txt
+├── README.md
+├── LICENSE
+├── CONTRIBUTING.md
+└── CODE_OF_CONDUCT.md
+```
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## ⚠️ Disclaimer
+Always respect website terms of service and robots.txt files when scraping:
 
-Always respect website terms of service and robots.txt files when scraping. Be mindful of:
+- Rate limit your requests
+- Don't overload servers
+- Follow copyright and data usage policies
+- Use official APIs when available
 
-- Rate limiting your requests
-- Not overloading servers
-- Following copyright and data usage policies
 
 ## 📧 Contact
 
