@@ -217,13 +217,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## ⚠️ Disclaimer
-
 Always respect website terms of service and robots.txt files when scraping:
 
 - Rate limit your requests
 - Don't overload servers
 - Follow copyright and data usage policies
 - Use official APIs when available
+
 
 ## 📧 Contact
 
