@@ -7,6 +7,7 @@ Thank you for your interest in contributing to this project! 🎉
 ### Reporting Bugs
 
 If you find a bug, please open an issue with:
+
 - A clear description of the problem
 - Steps to reproduce the issue
 - Expected vs actual behavior
@@ -15,6 +16,7 @@ If you find a bug, please open an issue with:
 ### Suggesting Enhancements
 
 We welcome suggestions for new web scraping examples! Please open an issue with:
+
 - A clear description of the enhancement
 - Why this would be useful
 - Example use cases
@@ -22,11 +24,13 @@ We welcome suggestions for new web scraping examples! Please open an issue with:
 ### Pull Requests
 
 1. **Fork the repository** and create your branch from `main`
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 2. **Set up your development environment**
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -34,20 +38,24 @@ We welcome suggestions for new web scraping examples! Please open an issue with:
    ```
 
 3. **Make your changes**
+
    - Write clear, commented code
    - Follow Python best practices (PEP 8)
    - Add examples or documentation if needed
 
 4. **Test your changes**
+
    - Ensure your code runs without errors
    - Test with different scenarios
 
 5. **Commit your changes**
+
    ```bash
    git commit -m "Add: brief description of your changes"
    ```
 
 6. **Push to your fork**
+
    ```bash
    git push origin feature/your-feature-name
    ```
@@ -66,6 +74,7 @@ We welcome suggestions for new web scraping examples! Please open an issue with:
 ## Adding New Scraping Examples
 
 When adding new web scraping examples:
+
 - Create a new notebook or Python file
 - Include clear documentation and comments
 - Add error handling where appropriate

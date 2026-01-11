@@ -22,9 +22,11 @@ A collection of web scraping projects, ideas, and practice code using Python. Th
 ## 📁 Projects
 
 ### Wikipedia Companies Scraper
+
 A scraper that extracts the list of largest companies in the United States by revenue from Wikipedia.
 
 **Features:**
+
 - Parses HTML tables using BeautifulSoup
 - Exports data to CSV format
 - Handles data cleaning and formatting
@@ -34,23 +36,26 @@ A scraper that extracts the list of largest companies in the United States by re
 ## 🚀 Installation
 
 ### Prerequisites
+
 - Python 3.7 or higher
 - pip package manager
 
 ### Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Shankar-CSE/web_scraping.git
    cd web_scraping
    ```
 
 2. **Create a virtual environment**
+
    ```bash
    # On Linux/Mac
    python -m venv venv
    source venv/bin/activate
-   
+
    # On Windows
    python -m venv venv
    .\venv\Scripts\activate
@@ -66,6 +71,7 @@ A scraper that extracts the list of largest companies in the United States by re
 ### Running the Wikipedia Scraper
 
 Open and run the Jupyter notebook:
+
 ```bash
 jupyter notebook wikipedia.ipynb
 ```
@@ -73,6 +79,7 @@ jupyter notebook wikipedia.ipynb
 Or run it in VS Code with the Jupyter extension installed.
 
 The script will:
+
 1. Fetch data from Wikipedia
 2. Parse the HTML table
 3. Export results to `output.csv`
@@ -96,6 +103,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## ⚠️ Disclaimer
 
 Always respect website terms of service and robots.txt files when scraping. Be mindful of:
+
 - Rate limiting your requests
 - Not overloading servers
 - Following copyright and data usage policies
@@ -104,4 +112,4 @@ Always respect website terms of service and robots.txt files when scraping. Be m
 
 Shankar-CSE - [@Shankar-CSE](https://github.com/Shankar-CSE)
 
-Project Link: [https://github.com/Shankar-CSE/web_scraping](https://github.com/Shankar-CSE/web_scraping) 
+Project Link: [https://github.com/Shankar-CSE/web_scraping](https://github.com/Shankar-CSE/web_scraping)
